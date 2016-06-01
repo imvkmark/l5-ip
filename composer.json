@@ -1,0 +1,19 @@
+{
+	"name": "imvkmark/l5-ip",
+	"description": "IP转换组件",
+	"authors": [
+		{
+			"name": "Mark Zhao",
+			"email": "zhaody901@126.com"
+		}
+	],
+	"require": {
+		"php": ">=5.4.0"
+	},
+	"autoload": {
+		"psr-4": {
+			"Imvkmark\\L5Ip\\": "src/L5Ip"
+		}
+	},
+	"minimum-stability": "dev"
+}
