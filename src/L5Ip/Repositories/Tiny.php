@@ -1,6 +1,5 @@
 <?php namespace Imvkmark\L5Ip\Repositories;
 
-use App\Lemon\Repositories\Sour\LmStr;
 use Imvkmark\L5Ip\Contracts\Ip as IpContract;
 
 /**
@@ -41,6 +40,7 @@ class Tiny extends Base implements IpContract {
 			}
 		}
 		fseek($fp, $offset['len'] + $index_offset['len'] - 1024);
-		return LmStr::convert($index_length['len'], '', 'utf-8') ? LmStr::convert(fread($fp, $index_length['len']), '', 'utf-8') : 'Unknown';
+		$st = fread($fp, $index_length['len']);
+		return iconv('gbk', 'utf-8', $st);
 	}
 }

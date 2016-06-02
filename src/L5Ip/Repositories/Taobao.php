@@ -15,8 +15,12 @@ class Taobao extends Base implements IpContract {
 		if ($this->isLocal($ip)) {
 			return $this->localArea;
 		}
-		$ipinfo = file_get_contents(str_replace('__IP__', $ip, $this->url));
-		$result = json_decode($ipinfo, true);
-		return $result;
+		$ipInfo = file_get_contents(str_replace('__IP__', $ip, $this->url));
+		$result = json_decode($ipInfo, true);
+		if ($result['code'] == 0) {
+			return $result['data']['country'];
+		} else {
+			return '';
+		}
 	}
 }

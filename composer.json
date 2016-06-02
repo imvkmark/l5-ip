@@ -15,5 +15,14 @@
 			"Imvkmark\\L5Ip\\": "src/L5Ip"
 		}
 	},
+	"repositories": [
+		{
+			"type": "composer",
+			"url": "https://packagist.phpcomposer.com"
+		},
+		{
+			"packagist": false
+		}
+	],
 	"minimum-stability": "dev"
 }
