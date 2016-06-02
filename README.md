@@ -18,4 +18,6 @@ php artisan vendor:publish --tag=sour-lemon
 \App::make('l5.ip')->area($ip);
 ```
 
+### License
 
+The Laravel plugin is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
